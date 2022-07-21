@@ -19,16 +19,107 @@
 			</div>
 		</div>
 		<div class="cardholder">
-			<div class="card">Magic Card</div>
-			<div class="card">Magic Card</div>
-			<div class="card">Magic Card</div>
-			<div class="card">Magic Card</div>
-			<div class="card">Magic Card</div>
+			<Projectcard
+				v-for="project in projects"
+				:key="project.id"
+				:project="project"
+			/>
 		</div>
 	</section>
 </template>
 <script>
-	export default {};
+	import Projectcard from "../components/projectcard.vue";
+	import Icons from "@/components/icons.vue";
+
+	export default {
+		data() {
+			return {
+				projects: [
+					{
+						id: "1",
+						img: "https://i.postimg.cc/Vk9zYRtg/Screenshot-2022-07-21-095105.jpg",
+						title: "ToDoList",
+						description: "",
+						language: "HTML, CSS, JAVASCRIPT",
+						date: "",
+						github: "",
+						livelink: "",
+					},
+					{
+						id: "2",
+						img: "https://i.postimg.cc/0jJqhdxp/Screenshot-2022-07-21-095132.jpg",
+						title: "Car Website",
+						description: "",
+						language: "HTML, CSS, JAVASCRIPT",
+						date: "",
+						github: "",
+						livelink: "",
+					},
+					{
+						id: "3",
+						img: "https://i.postimg.cc/tg2y642V/Screenshot-2022-07-21-095033.jpg",
+						title: "BMI Calculator",
+						description: "",
+						language: "HTML, CSS, JAVASCRIPT",
+						date: "",
+						github: "",
+						livelink: "",
+					},
+					{
+						id: "4",
+						img: "https://i.postimg.cc/G2fCMS0L/Screenshot-2022-07-21-095048.jpg",
+						title: "Weather Converter",
+						description: "",
+						language: "HTML, CSS, JAVASCRIPT",
+						date: "",
+						github: "",
+						livelink: "",
+					},
+					{
+						id: "5",
+						img: "https://i.postimg.cc/7b8y4GYj/Screenshot-2022-07-21-094939.jpg",
+						title: "Restaurant Website",
+						description: "",
+						language: "HTML, CSS, BOOTSTRAP",
+						date: "",
+						github: "",
+						livelink: "",
+					},
+					{
+						id: "6",
+						img: "https://i.postimg.cc/9M02YHng/Screenshot-2022-07-21-095153.jpg",
+						title: "Game Website",
+						description: "",
+						language: "HTML, CSS, JAVASCRIPT, VUE",
+						date: "",
+						github: "",
+						livelink: "",
+					},
+					{
+						id: "7",
+						img: "https://i.postimg.cc/2SNzRJ13/Screenshot-2022-07-21-094959.jpg",
+						title: "Second Portfolio",
+						description: "",
+						language: "HTML, CSS, BOOTSTRAP",
+						date: "",
+						github: "",
+						livelink: "",
+					},
+					{
+						id: "8",
+						img: "https://i.postimg.cc/43Jsn9bg/Screenshot-2022-07-21-095015.jpg",
+						title: "Javascript Calculator",
+						description: "",
+						language: "HTML, CSS, BOOTSTRAP, JAVASCRIPT",
+						date: "",
+						github: "",
+						livelink: "",
+					},
+				],
+			};
+		},
+		components: { Projectcard, Icons, Icons, Icons, Icons },
+	};
 </script>
 <style scoped>
 	#projects {
@@ -114,26 +205,8 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		gap: 30px;
+		gap: 35px;
 	}
-	.card {
-		background: #191c29;
-		width: 250px;
-		height: 400px;
-		padding: 3px;
-		border-radius: 6px;
-		display: flex;
-		flex-direction: row;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		font-size: 1.5em;
-		color: white;
-	}
-	.card:hover {
-		box-shadow: 0 0px 7px 9px rgba(58, 39, 96, 0.6);
-		transition: box-shadow 0.3s ease-in-out;
-	}
+
 	/*  */
 </style>
