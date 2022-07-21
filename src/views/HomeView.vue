@@ -8,7 +8,7 @@
 					<p>-aspiring web developer-</p>
 				</div>
 				<div class="head2">
-					<h1>WELCOME TO MY UNIVERSE</h1>
+					<h1>WELCOME TO My UNIVERSE</h1>
 				</div>
 			</div>
 			<div class="night">
@@ -67,8 +67,29 @@
 		font-family: SpaceQuest3;
 		src: url(/fonts/SpaceQuestItalic-g8jY.ttf);
 	}
+	@font-face {
+		font-family: SpaceMIssion;
+		src: url(/Users/Admin/Desktop/2022_07_20/vue_portfolio/fonts/SpaceMission-rgyw9.otf);
+	}
+	@font-face {
+		font-family: Edge;
+		src: url(/Users/Admin/Desktop/2022_07_20/vue_portfolio/fonts/EdgeOfTheGalaxyPosterItalic-x3o1m.otf);
+	}
+	@font-face {
+		font-family: EdgeReg;
+		src: url(/Users/Admin/Desktop/2022_07_20/vue_portfolio/fonts/EdgeOfTheGalaxyRegular-OVEa6.otf);
+	}
+	@font-face {
+		font-family: StarJedi;
+		src: url(/Users/Admin/Desktop/2022_07_20/vue_portfolio/fonts/StarJedi-DGRW.ttf);
+	}
+	@font-face {
+		font-family: Rocket;
+		src: url(/Users/Admin/Desktop/2022_07_20/vue_portfolio/fonts/RocketRinder-yV5d.ttf);
+	}
+
 	.head {
-		font-size: 30px;
+		font-size: 40px;
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
@@ -81,21 +102,18 @@
 	}
 	.head2 {
 		position: relative;
-		font-size: 30px;
-		margin-top: 20%;
+		font-size: 45px;
+		margin-top: 17%;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: center;
 		align-items: center;
 		color: white;
-		letter-spacing: 2px;
-		font-family: SpaceQuest1;
-		text-shadow: 2px 2px grey;
+		letter-spacing: 5px;
+		font-family: Rocket;
 	}
-	.head2:hover {
-		color: #5f91ff;
-	}
+
 	body {
 		background-color: #161a2d;
 	}

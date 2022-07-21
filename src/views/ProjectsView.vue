@@ -197,24 +197,16 @@
 
 	.heading- {
 		color: white;
+		font-family: Rocket;
+		text-shadow: 3px 3px black;
+		letter-spacing: 1px;
+		font-size: 30px;
 	}
 	.heading {
-		background: #67b3e4; /* fallback for old browsers */
-		background: -webkit-linear-gradient(
-			to right,
-			#67b3e4,
-			#c292de
-		); /* Chrome 10-25, Safari 5.1-6 */
-		background: linear-gradient(
-			to right,
-			#67b3e4,
-			#c292de
-		); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-		-webkit-background-clip: text;
-		background-clip: text;
-		color: transparent;
+		color: #67b3e4;
 		font-family: SpaceQuest;
 		letter-spacing: 3px;
+		text-shadow: 2px 2px black;
 	}
 
 	/*  */
