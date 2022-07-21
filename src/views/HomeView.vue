@@ -14,8 +14,8 @@
 			<div class="night">
 				<div class="shooting_star"></div>
 				<div class="shooting_star"></div>
-				<div class="test">test</div>
-				<div class="test1">test</div>
+				<div class="test"></div>
+				<div class="test1"></div>
 				<article class="earth-demo">
 					<div class="earth">
 						<a href="#about"
@@ -92,6 +92,9 @@
 		letter-spacing: 2px;
 		font-family: SpaceQuest1;
 		text-shadow: 2px 2px grey;
+	}
+	.head2:hover {
+		color: #5f91ff;
 	}
 	body {
 		background-color: #161a2d;

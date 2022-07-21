@@ -18,9 +18,18 @@
 				/>
 			</div>
 		</div>
+		<div class="projectFilter" v-if="filteredProjects">
+			<select v-model="language">
+				<option value="all">All</option>
+				<option value="CSS">CSS</option>
+				<option value="JAVASCRIPT">Javascript</option>
+				<option value="BOOTSTRAP">Bootstrap</option>
+				<option value="VUE">Vue</option>
+			</select>
+		</div>
 		<div class="cardholder">
 			<Projectcard
-				v-for="project in projects"
+				v-for="project of filteredProjects"
 				:key="project.id"
 				:project="project"
 			/>
@@ -28,10 +37,20 @@
 	</section>
 </template>
 <script>
-	import Projectcard from "../components/projectcard.vue";
 	import Icons from "@/components/icons.vue";
+	import Projectcard from "../components/projectcard.vue";
 
 	export default {
+		computed: {
+			filteredProjects() {
+				return this.projects.filter((project) => {
+					let isMatch = true;
+					if (this.language !== "all" && project.language !== this.language)
+						isMatch = false;
+					return isMatch;
+				});
+			},
+		},
 		data() {
 			return {
 				projects: [
@@ -40,7 +59,7 @@
 						img: "https://i.postimg.cc/Vk9zYRtg/Screenshot-2022-07-21-095105.jpg",
 						title: "ToDoList",
 						description: "",
-						language: "HTML, CSS, JAVASCRIPT",
+						language: "JAVASCRIPT",
 						date: "",
 						github: "",
 						livelink: "",
@@ -50,7 +69,7 @@
 						img: "https://i.postimg.cc/0jJqhdxp/Screenshot-2022-07-21-095132.jpg",
 						title: "Car Website",
 						description: "",
-						language: "HTML, CSS, JAVASCRIPT",
+						language: "JAVASCRIPT",
 						date: "",
 						github: "",
 						livelink: "",
@@ -60,7 +79,7 @@
 						img: "https://i.postimg.cc/tg2y642V/Screenshot-2022-07-21-095033.jpg",
 						title: "BMI Calculator",
 						description: "",
-						language: "HTML, CSS, JAVASCRIPT",
+						language: "JAVASCRIPT",
 						date: "",
 						github: "",
 						livelink: "",
@@ -70,7 +89,7 @@
 						img: "https://i.postimg.cc/G2fCMS0L/Screenshot-2022-07-21-095048.jpg",
 						title: "Weather Converter",
 						description: "",
-						language: "HTML, CSS, JAVASCRIPT",
+						language: "JAVASCRIPT",
 						date: "",
 						github: "",
 						livelink: "",
@@ -80,7 +99,7 @@
 						img: "https://i.postimg.cc/7b8y4GYj/Screenshot-2022-07-21-094939.jpg",
 						title: "Restaurant Website",
 						description: "",
-						language: "HTML, CSS, BOOTSTRAP",
+						language: "BOOTSTRAP",
 						date: "",
 						github: "",
 						livelink: "",
@@ -90,7 +109,7 @@
 						img: "https://i.postimg.cc/9M02YHng/Screenshot-2022-07-21-095153.jpg",
 						title: "Game Website",
 						description: "",
-						language: "HTML, CSS, JAVASCRIPT, VUE",
+						language: "VUE",
 						date: "",
 						github: "",
 						livelink: "",
@@ -100,7 +119,7 @@
 						img: "https://i.postimg.cc/2SNzRJ13/Screenshot-2022-07-21-094959.jpg",
 						title: "Second Portfolio",
 						description: "",
-						language: "HTML, CSS, BOOTSTRAP",
+						language: "CSS",
 						date: "",
 						github: "",
 						livelink: "",
@@ -108,17 +127,18 @@
 					{
 						id: "8",
 						img: "https://i.postimg.cc/43Jsn9bg/Screenshot-2022-07-21-095015.jpg",
-						title: "Javascript Calculator",
+						title: "Calculator",
 						description: "",
-						language: "HTML, CSS, BOOTSTRAP, JAVASCRIPT",
+						language: "JAVASCRIPT",
 						date: "",
 						github: "",
 						livelink: "",
 					},
 				],
+				language: "all",
 			};
 		},
-		components: { Projectcard, Icons, Icons, Icons, Icons },
+		components: { Projectcard, Icons, Icons, Icons, Icons, Projectcard },
 	};
 </script>
 <style scoped>
@@ -205,8 +225,20 @@
 		flex-wrap: wrap;
 		justify-content: center;
 		align-items: center;
-		gap: 35px;
+		gap: 45px;
 	}
-
+	.projectFilter {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-content: center;
+		margin-bottom: 5%;
+	}
+	select {
+		width: 190px;
+		height: 50px;
+		filter: drop-shadow(4px 4px 4px grey);
+	}
 	/*  */
 </style>

@@ -40,7 +40,7 @@
 	.card {
 		background: #191c29;
 		width: 290px;
-		height: 460px;
+		height: 500px;
 		padding: 3px;
 		border-radius: 6px;
 		display: flex;
@@ -54,7 +54,7 @@
 		border-top-left-radius: 15%;
 		border-top-right-radius: 15%;
 		animation: floating 4s ease-in-out infinite;
-		filter: drop-shadow(4px 4px 4px grey);
+		box-shadow: 0 0px 25px 9px rgba(58, 39, 96, 0.6);
 	}
 	button {
 		display: none;
@@ -62,15 +62,15 @@
 		height: 30px;
 	}
 	.card:hover {
-		filter: none;
-		box-shadow: 0 0px 7px 9px rgba(58, 39, 96, 0.6);
-		transition: box-shadow 0.5s ease-in-out;
-		transition: filter 0.5s ease-in-out;
+		box-shadow: none;
+		filter: drop-shadow(4px 4px 4px grey);
+		transition: box-shadow 0.5s ease-out;
+		transition: filter 0.5s ease-in;
 	}
-	.card:hover button {
+	/* .card:hover button {
 		display: block;
 		color: black;
-	}
+	} */
 	@keyframes floating {
 		0% {
 			transform: translateY(0);
